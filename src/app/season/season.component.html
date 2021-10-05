@@ -1,0 +1,25 @@
+<!-- <div [ngClass]="{show: open}" class="dropdown show">
+  <a (click)= "onToggleDropDown()"class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+  </a>
+
+  <div [ngClass]="{show: open}" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Spring</a>
+    <a class="dropdown-item" href="#">Summer</a>
+    <a class="dropdown-item" href="#">Fall</a>
+    <a class="dropdown-item" href="#">Winter</a>
+  </div>
+</div> -->
+
+<div [ngClass]="{open: open}" class="dropdown">
+  <button (click)= "onToggleDropDown()" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Choose Season
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a (click)="onChooseSeason('Spring')" class="dropdown-item" href="#">Spring</a></li>
+    <li><a (click)="onChooseSeason('Summer')" class="dropdown-item" href="#">Summer</a></li>
+    <li><a (click)="onChooseSeason('Fall')" class="dropdown-item" href="#">Fall</a></li>
+    <li><a (click)="onChooseSeason('Winter')" class="dropdown-item" href="#">Winter</a></li>
+  </ul>
+</div>
