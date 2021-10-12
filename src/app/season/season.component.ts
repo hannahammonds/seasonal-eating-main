@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { RecipeService } from '../recipe.service';
 export class SeasonComponent implements OnInit {
   open=false
   constructor(private recipeService:RecipeService) { }
+  seasonList: any
 
   ngOnInit(): void {
   }
@@ -21,8 +22,9 @@ export class SeasonComponent implements OnInit {
 
   onChooseSeason(season: string) {
     console.log(season);
-    this.recipeService.onChooseSeason (season);
-    this.open=false;
+    this.seasonList=this.recipeService.onChooseSeason (season);
+    console.log(this.seasonList);
+
   }
 
 }

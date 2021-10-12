@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 
 @Component({
@@ -6,15 +6,15 @@ import { RecipeService } from '../recipe.service';
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css']
 })
-export class RecipeListComponent implements OnInit {
 
-  recipes =[];
+export class RecipeListComponent implements OnInit {
+ @Input () seasonList
+
   constructor(private recipeService:RecipeService) { }
 
   ngOnInit(): void {
-    this.recipes=this.recipeService.sortedRecipes
-    console.log(this.recipes);
-    this.recipeService.recipeChanged.subscribe(data=> this.recipes=data);
+   
+
   }
 
   onChooseRecipe(i: number){
