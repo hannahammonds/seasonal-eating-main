@@ -18,6 +18,7 @@ const appRoutes: Routes = [
     { path: 'summer', component: SummerComponent },
     { path: 'fall', component: FallComponent },
     { path: 'winter', component: WinterComponent },
+    { path: ':id', component: WinterComponent},
   ]},
   { path: 'ingredient', component: IngredientChoiceComponent },
   { path: 'recipe-list', component: RecipeListComponent },
