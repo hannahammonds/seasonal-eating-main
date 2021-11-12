@@ -1,1 +1,14 @@
-<button>Ingredient Choice</button>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="ingredient-search">Ingredient Search</label>
+    <input
+    type="text"
+    id="ingredient-search"
+    class="form-control"
+    ngModel
+    name="ingredient-search">
+    <button type="submit">Ingredient Search</button>
+  </div>
+</form>
+

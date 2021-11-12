@@ -12,4 +12,10 @@ export class IngredientChoiceComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(f) {
+    console.log(f)
+  }
+
+
 }
+

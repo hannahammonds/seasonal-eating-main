@@ -14,6 +14,8 @@ import { SpringComponent } from './season/spring/spring.component';
 import { SummerComponent } from './season/summer/summer.component';
 import { FallComponent } from './season/fall/fall.component';
 import { WinterComponent } from './season/winter/winter.component';
+import { FormsModule } from '@angular/forms';
+import { SeasonTypeComponent } from './season-type/season-type.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +31,12 @@ import { WinterComponent } from './season/winter/winter.component';
     SummerComponent,
     FallComponent,
     WinterComponent,
+    SeasonTypeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
