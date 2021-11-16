@@ -13,11 +13,8 @@ export class RecipeListComponent implements OnInit {
   constructor(private recipeService:RecipeService) { }
 
   ngOnInit(): void {
-   
+
 
   }
 
-  onChooseRecipe(i: number){
-    this.recipeService.onChooseRecipe(i);
-  }
 }

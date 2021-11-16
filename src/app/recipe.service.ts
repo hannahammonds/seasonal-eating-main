@@ -66,6 +66,10 @@ export class RecipeService {
   onChooseRecipe(i: number) {
     this.recipeSelected.emit(this.sortedRecipes[i]);
   }
+
+  getRecipe(id:number){
+return this.recipes.filter((r) => r.id === id);
+  }
 }
 
 // ingredients: [new Ingredient("tomatoes", 5)]

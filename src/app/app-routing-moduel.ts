@@ -19,7 +19,12 @@ const appRoutes: Routes = [
     // { path: 'summer', component: SummerComponent },
     // { path: 'fall', component: FallComponent },
     // { path: 'winter', component: WinterComponent },
-    { path: ':search', component: SeasonTypeComponent},
+    { path: ':search', component: SeasonTypeComponent, children:[
+      // localhost:4200/season/:search:/:id
+      {
+        path: ':id', component: RecipeComponent
+      }
+    ]},
   ]},
   { path: 'ingredient', component: IngredientChoiceComponent },
   { path: 'recipe-list', component: RecipeListComponent },

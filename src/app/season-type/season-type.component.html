@@ -1,1 +1,46 @@
-<p>season-type works!</p>
+<div *ngFor="let recipe of recipes">
+  <div (click)="onChooseRecipe(recipe)">
+    <h4 [routerLink]="recipe.id" style="cursor:pointer">{{ recipe.name }}</h4>
+  </div>
+</div>
+<br>
+<!-- {name: "sdf", id: 4,} -->
+<!-- localhost:4200/season/winter/:id-->
+<!-- localhost:4200/season/winter/1 -->
+<!-- <div
+class="col-md-8" routerLink="id" *ngIf="chosenRecipe">
+  <h4>Name: {{ chosenRecipe.name }}</h4>
+  <h4>Season: {{ chosenRecipe.season }}</h4>
+  <h5>Ingredients</h5>
+  <p *ngFor="let ingredient of chosenRecipe.ingredients">
+    {{ ingredient.amount }}
+    {{ ingredient.name }}
+  </p>
+<br>
+</div> -->
+<router-outlet></router-outlet>
+<!-- one way -->
+<!-- click listener/event binding -->
+<!-- define a method with one parameter -->
+<!-- in the method, store the parameter in a class property -->
+<!-- ngif to see the property recipe exist -->
+<!-- print out the details in the element with ngIf -->
+<!-- {{recipe.name}} -->
+<!-- use ngFor to print out ingredients -->
+
+<!-- another way to print out details-->
+<!-- configure routing -->
+<!-- localhost:4200/season/:search -->
+<!-- give this route child path -->
+<!-- localhost:4200/season/:search/:id -->
+<!-- implement router outlet here -->
+<!--  -->
+
+  <!-- <div *ngFor="let recipe of recipes"></div> -->
+
+
+<!-- {
+name: 'winter 2',
+id: '1',
+ingredients:[{name: 'tomato', amount: 1},{name: 'tomato', amount: 1}]
+} -->

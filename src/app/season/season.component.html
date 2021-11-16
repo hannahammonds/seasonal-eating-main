@@ -25,11 +25,20 @@
     </div >
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1"
   [ngClass]="{ show: dropdown.isShow }">
-    <li><a (click)="onChooseSeason('Spring')" class="dropdown-item">Spring</a></li>
+    <!-- <li><a (click)="onChooseSeason('Spring')" class="dropdown-item">Spring</a></li>
     <li><a (click)="onChooseSeason('Summer')" class="dropdown-item" >Summer</a></li>
     <li><a (click)="onChooseSeason('Fall')" class="dropdown-item" >Fall</a></li>
-    <li><a (click)="onChooseSeason('Winter')" class="dropdown-item" >Winter</a></li>
+    <li><a (click)="onChooseSeason('Winter')" class="dropdown-item" >Winter</a></li> -->
+    <li><a routerLink="Spring" class="dropdown-item">Spring</a></li>
+    <li><a routerLink="Summer" class="dropdown-item">Summer</a></li>
+    <li><a routerLink="Fall" class="dropdown-item">Fall</a></li>
+    <li><a routerLink="Winter" class="dropdown-item">Winter</a></li>
+
   </ul>
 </div>
 <app-recipe-list [seasonList]="seasonList"></app-recipe-list>
+<!-- localhost:4200/season -->
+
+<!-- localhost:4200/season/:search -->
+
 <router-outlet></router-outlet>
